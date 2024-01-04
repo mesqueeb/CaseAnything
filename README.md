@@ -45,20 +45,20 @@ CaseAnything has different behaviour if the string you pass has spaces or not.
 
 | Name                              | Input example                                            | Output example |
 | --------------------------------- | -------------------------------------------------------- | -------------- |
-| 🐪 camelCase                      | `camelCase('$catDog')`                                   | `catDog`       |
-| 🐫 PascalCase<br />UpperCamelCase | `pascalCase('$catDog')`<br />`upperCamelCase('$catDog')` | `CatDog`       |
-| 🥙 kebab-case                     | `kebabCase('$catDog')`                                   | `cat-dog`      |
-| 🐍 snake_case                     | `snakeCase('$catDog')`                                   | `cat_dog`      |
-| 📣 CONSTANT_CASE                  | `constantCase('$catDog')`                                | `CAT_DOG`      |
-| 🚂 Train-Case                     | `trainCase('$catDog')`                                   | `Cat-Dog`      |
-| 🕊 Ada_Case                        | `adaCase('$catDog')`                                     | `Cat_Dog`      |
-| 👔 COBOL-CASE                     | `cobolCase('$catDog')`                                   | `CAT-DOG`      |
-| 📍 Dot.notation                   | `dotNotation('$catDog')`                                 | `cat.Dog`      |
-| 📂 Path/case                      | `pathCase('$catDog')`                                    | `$cat/Dog`     |
-| 🛰 Space case                      | `spaceCase('$catDog')`                                   | `$cat Dog`     |
-| 🏛 Capital Case                    | `capitalCase('$catDog')`                                 | `$Cat Dog`     |
-| 🔡 lower case                     | `lowerCase('$catDog')`                                   | `$cat dog`     |
-| 🔠 UPPER CASE                     | `upperCase('$catDog')`                                   | `$CAT DOG`     |
+| 🐪 camelCase                      | `camelCase("$catDog")`                                   | `catDog`       |
+| 🐫 PascalCase<br />UpperCamelCase | `pascalCase("$catDog")`<br />`upperCamelCase("$catDog")` | `CatDog`       |
+| 🥙 kebab-case                     | `kebabCase("$catDog")`                                   | `cat-dog`      |
+| 🐍 snake_case                     | `snakeCase("$catDog")`                                   | `cat_dog`      |
+| 📣 CONSTANT_CASE                  | `constantCase("$catDog")`                                | `CAT_DOG`      |
+| 🚂 Train-Case                     | `trainCase("$catDog")`                                   | `Cat-Dog`      |
+| 🕊 Ada_Case                        | `adaCase("$catDog")`                                     | `Cat_Dog`      |
+| 👔 COBOL-CASE                     | `cobolCase("$catDog")`                                   | `CAT-DOG`      |
+| 📍 Dot.notation                   | `dotNotation("$catDog")`                                 | `cat.Dog`      |
+| 📂 Path/case                      | `pathCase("$catDog")`                                    | `$cat/Dog`     |
+| 🛰 Space case                      | `spaceCase("$catDog")`                                   | `$cat Dog`     |
+| 🏛 Capital Case                    | `capitalCase("$catDog")`                                 | `$Cat Dog`     |
+| 🔡 lower case                     | `lowerCase("$catDog")`                                   | `$cat dog`     |
+| 🔠 UPPER CASE                     | `upperCase("$catDog")`                                   | `$CAT DOG`     |
 
 #### Special Characters
 
