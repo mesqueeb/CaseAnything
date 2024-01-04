@@ -4,7 +4,7 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fmesqueeb%2FCaseAnything%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/mesqueeb/CaseAnything)
 
 ```
-https://github.com/mesqueeb/CaseAnything.git
+.package(url: "https://github.com/mesqueeb/CaseAnything", from: "0.0.1")
 ```
 
 14 case changing functions: camelCase, kebab-case, PascalCase **and more**...<br />
@@ -12,7 +12,7 @@ A simple integration with nano package size. (SMALL footprint!)
 
 ## Motivation
 
-I created this package because I could not find other packages that already do case changing...
+I created this package because the other package that change cases do not cover all the 14 possibilities mine does.
 
 <table>
   <tr>
