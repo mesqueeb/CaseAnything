@@ -1,0 +1,5 @@
+{
+	"scripts": {
+		"bump": "npx bumpp"
+	}
+}
