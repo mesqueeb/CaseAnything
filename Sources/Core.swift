@@ -5,10 +5,10 @@ import Foundation
 /// - first lowercase then all capitalised
 /// - *strips away* special characters by default
 ///
-/// @example
-///   camelCase("$catDog") == "catDog"
-/// @example
-///   camelCase("$catDog", keepSpecialCharacters: true) == "$catDog"
+/// ```swift
+/// camelCase("$catDog") == "catDog"
+/// camelCase("$catDog", keepSpecialCharacters: true) == "$catDog"
+/// ```
 public func camelCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "", keep: keep)
 		.enumerated().reduce("") { result, part in
@@ -28,10 +28,10 @@ public func camelCase(_ string: String, keepSpecialCharacters: Bool = false, kee
 /// - all capitalised
 /// - *strips away* special characters by default
 ///
-/// @example
-///   pascalCase("$catDog") == "CatDog"
-/// @example
-///   pascalCase("$catDog", keepSpecialCharacters: true) == "$CatDog"
+/// ```swift
+/// pascalCase("$catDog") == "CatDog"
+/// pascalCase("$catDog", keepSpecialCharacters: true) == "$CatDog"
+/// ```
 public func pascalCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "", keep: keep)
 		.reduce("") { result, word in
@@ -44,10 +44,10 @@ public func pascalCase(_ string: String, keepSpecialCharacters: Bool = false, ke
 /// - all capitalised
 /// - *strips away* special characters by default
 ///
-/// @example
-///   upperCamelCase("$catDog") == "CatDog"
-/// @example
-///   upperCamelCase("$catDog", keepSpecialCharacters: true) == "$CatDog"
+/// ```swift
+/// upperCamelCase("$catDog") == "CatDog"
+/// upperCamelCase("$catDog", keepSpecialCharacters: true) == "$CatDog"
+/// ```
 public let upperCamelCase = pascalCase
 
 /// # 🥙 kebab-case
@@ -55,10 +55,10 @@ public let upperCamelCase = pascalCase
 /// - hyphenated lowercase
 /// - *strips away* special characters by default
 ///
-/// @example
-///   kebabCase("$catDog") == "cat-dog"
-/// @example
-///   kebabCase("$catDog", keepSpecialCharacters: true) == "$cat-dog"
+/// ```swift
+/// kebabCase("$catDog") == "cat-dog"
+/// kebabCase("$catDog", keepSpecialCharacters: true) == "$cat-dog"
+/// ```
 public func kebabCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "-", keep: keep)
 		.joined()
@@ -70,10 +70,10 @@ public func kebabCase(_ string: String, keepSpecialCharacters: Bool = false, kee
 /// - underscored lowercase
 /// - *strips away* special characters by default
 ///
-/// @example
-///   snakeCase("$catDog") == "cat_dog"
-/// @example
-///   snakeCase("$catDog", keepSpecialCharacters: true) == "$cat_dog"
+/// ```swift
+/// snakeCase("$catDog") == "cat_dog"
+/// snakeCase("$catDog", keepSpecialCharacters: true) == "$cat_dog"
+/// ```
 public func snakeCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "_", keep: keep)
 		.joined()
@@ -85,10 +85,10 @@ public func snakeCase(_ string: String, keepSpecialCharacters: Bool = false, kee
 /// - underscored uppercase
 /// - *strips away* special characters by default
 ///
-/// @example
-///   constantCase("$catDog") == "CAT_DOG"
-/// @example
-///   constantCase("$catDog", keepSpecialCharacters: true) == "$CAT_DOG"
+/// ```swift
+/// constantCase("$catDog") == "CAT_DOG"
+/// constantCase("$catDog", keepSpecialCharacters: true) == "$CAT_DOG"
+/// ```
 public func constantCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "_", keep: keep)
 		.joined()
@@ -100,10 +100,10 @@ public func constantCase(_ string: String, keepSpecialCharacters: Bool = false, 
 /// - hyphenated & capitalised
 /// - *strips away* special characters by default
 ///
-/// @example
-///   trainCase("$catDog") == "Cat-Dog"
-/// @example
-///   trainCase("$catDog", keepSpecialCharacters: true) == "$Cat-Dog"
+/// ```swift
+/// trainCase("$catDog") == "Cat-Dog"
+/// trainCase("$catDog", keepSpecialCharacters: true) == "$Cat-Dog"
+/// ```
 public func trainCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "-", keep: keep)
 		.map { word in capitaliseWord(word) }
@@ -115,10 +115,10 @@ public func trainCase(_ string: String, keepSpecialCharacters: Bool = false, kee
 /// - underscored & capitalised
 /// - *strips away* special characters by default
 ///
-/// @example
-///   adaCase("$catDog") == "Cat_Dog"
-/// @example
-///   adaCase("$catDog", keepSpecialCharacters: true) == "$Cat_Dog"
+/// ```swift
+/// adaCase("$catDog") == "Cat_Dog"
+/// adaCase("$catDog", keepSpecialCharacters: true) == "$Cat_Dog"
+/// ```
 public func adaCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "_", keep: keep)
 		.map { word in capitaliseWord(word) }
@@ -130,10 +130,10 @@ public func adaCase(_ string: String, keepSpecialCharacters: Bool = false, keep:
 /// - hyphenated uppercase
 /// - *strips away* special characters by default
 ///
-/// @example
-///   cobolCase("$catDog") == "CAT-DOG"
-/// @example
-///   cobolCase("$catDog", keepSpecialCharacters: true) == "$CAT-DOG"
+/// ```swift
+/// cobolCase("$catDog") == "CAT-DOG"
+/// cobolCase("$catDog", keepSpecialCharacters: true) == "$CAT-DOG"
+/// ```
 public func cobolCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: "-", keep: keep)
 		.joined()
@@ -145,10 +145,10 @@ public func cobolCase(_ string: String, keepSpecialCharacters: Bool = false, kee
 /// - adds dots, does not change casing
 /// - *strips away* special characters by default
 ///
-/// @example
-///   dotNotation("$catDog") == "cat.Dog"
-/// @example
-///   dotNotation("$catDog", keepSpecialCharacters: true) == "$cat.Dog"
+/// ```swift
+/// dotNotation("$catDog") == "cat.Dog"
+/// dotNotation("$catDog", keepSpecialCharacters: true) == "$cat.Dog"
+/// ```
 public func dotNotation(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
 	return splitAndPrefix(string, keepSpecialCharacters: keepSpecialCharacters, prefix: ".", keep: keep).joined()
 }
@@ -158,10 +158,10 @@ public func dotNotation(_ string: String, keepSpecialCharacters: Bool = false, k
 /// - adds slashes, does not change casing
 /// - *keeps* special characters by default
 ///
-/// @example
-///   pathCase("$catDog") == "$cat/Dog"
-/// @example
-///   pathCase("$catDog", keepSpecialCharacters: false) == "cat/Dog"
+/// ```swift
+/// pathCase("$catDog") == "$cat/Dog"
+/// pathCase("$catDog", keepSpecialCharacters: false) == "cat/Dog"
+/// ```
 public func pathCase(
 	_ string: String,
 	keepSpecialCharacters: Bool = true, keep: [String] = []
@@ -179,10 +179,10 @@ public func pathCase(
 /// - adds spaces, does not change casing
 /// - *keeps* special characters by default
 ///
-/// @example
-///   spaceCase("$catDog") == "$cat Dog"
-/// @example
-///   spaceCase("$catDog", keepSpecialCharacters: false) == "cat Dog"
+/// ```swift
+/// spaceCase("$catDog") == "$cat Dog"
+/// spaceCase("$catDog", keepSpecialCharacters: false) == "cat Dog"
+/// ```
 public func spaceCase(
 	_ string: String,
 	keepSpecialCharacters: Bool = true, keep: [String] = []
@@ -195,10 +195,10 @@ public func spaceCase(
 /// - capitalizes words and adds spaces
 /// - *keeps* special characters by default
 ///
-/// @example
-///   capitalCase("$catDog") == "$Cat Dog"
-/// @example
-///   capitalCase("$catDog", keepSpecialCharacters: false) == "Cat Dog"
+/// ```swift
+/// capitalCase("$catDog") == "$Cat Dog"
+/// capitalCase("$catDog", keepSpecialCharacters: false) == "Cat Dog"
+/// ```
 ///
 /// ⟪ if you do not want to add spaces, use `pascalCase()` ⟫
 public func capitalCase(
@@ -214,10 +214,10 @@ public func capitalCase(
 /// - makes words lowercase and adds spaces
 /// - *keeps* special characters by default
 ///
-/// @example
-///   lowerCase("$catDog") == "$cat dog"
-/// @example
-///   lowerCase("$catDog", keepSpecialCharacters: false) == "cat dog"
+/// ```swift
+/// lowerCase("$catDog") == "$cat dog"
+/// lowerCase("$catDog", keepSpecialCharacters: false) == "cat dog"
+/// ```
 ///
 /// ⟪ if you do not want to add spaces, use the native JS `toLowerCase()` ⟫
 public func lowerCase(
@@ -234,10 +234,10 @@ public func lowerCase(
 /// - makes words upper case and adds spaces
 /// - *keeps* special characters by default
 ///
-/// @example
-///   upperCase("$catDog") == "$CAT DOG"
-/// @example
-///   upperCase("$catDog", keepSpecialCharacters: false) == "CAT DOG"
+/// ```swift
+/// upperCase("$catDog") == "$CAT DOG"
+/// upperCase("$catDog", keepSpecialCharacters: false) == "CAT DOG"
+/// ```
 ///
 /// ⟪ if you do not want to add spaces, use the native JS `toUpperCase()` ⟫
 public func upperCase(
