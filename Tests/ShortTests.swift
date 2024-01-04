@@ -1,3 +1,4 @@
+// swiftformat:disable all
 import XCTest
 @testable import CaseAnything
 
@@ -16,7 +17,7 @@ final class ShortTests: XCTestCase {
   func testCapitalCase__Short() { XCTAssertEqual( capitalCase("$catDog"), "$Cat Dog") }
   func testUpperCase____Short() { XCTAssertEqual(   upperCase("$catDog"), "$CAT DOG") }
   func testLowerCase____Short() { XCTAssertEqual(   lowerCase("$catDog"), "$cat dog") }
-
+ 
   func testCamelCase____Spaces() { XCTAssertEqual(   camelCase("Cats? & Dogs!"), "catsDogs") }
   func testPascalCase___Spaces() { XCTAssertEqual(  pascalCase("Cats? & Dogs!"), "CatsDogs") }
   func testKebabCase____Spaces() { XCTAssertEqual(   kebabCase("Cats? & Dogs!"), "cats-dogs") }

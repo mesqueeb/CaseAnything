@@ -56,8 +56,8 @@ public func splitAndPrefix(_ string: String, keepSpecialCharacters: Bool = false
         if !keepSpecialCharacters || !keep.isEmpty {
             let regexPattern = keep.isEmpty ? "[^a-zA-ZØßø0-9]" : "[^a-zA-ZØßø0-9\(keep.joined())]"
             if let regex = try? NSRegularExpression(pattern: regexPattern) {
-                part = regex.stringByReplacingMatches(in: part, range: NSRange(0 ..< part.utf16.count), withTemplate: "")
-
+                let partDecomposed = part.decomposedStringWithCanonicalMapping
+                part = regex.stringByReplacingMatches(in: partDecomposed, range: NSRange(0 ..< partDecomposed.utf16.count), withTemplate: "")
                 if keep.isEmpty { foundPrefix = "" }
             }
         }
