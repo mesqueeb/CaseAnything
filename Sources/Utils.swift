@@ -6,7 +6,7 @@ import Foundation
 // lower case ranges
 // [à-öø-ÿ]
 
-public func magicSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "^[a-zà-öø-ÿ]+|[A-ZÀ-ÖØ-ß][a-zà-öø-ÿ]+|[a-zà-öø-ÿ]+|[0-9]+|[A-ZÀ-ÖØ-ß]+(?![a-zà-öø-ÿ])") }
+public func magicSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "^[a-zà-öø-ÿа-я]+|[A-ZÀ-ÖØ-ßА-Я][a-zà-öø-ÿа-я]+|[a-zà-öø-ÿа-я]+|[0-9]+|[A-ZÀ-ÖØ-ßА-Я]+(?![a-zà-öø-ÿа-я])") }
 public func spaceSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "\\S+") }
 
 /// A string.matchAll function that will return an array of _string parts_ and the indexes at which it split each part
