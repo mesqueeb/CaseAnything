@@ -4,13 +4,15 @@
   "type": "module",
   "scripts": {
     "test": "swift test",
-    "bump": "np --no-cleanup --no-publish"
+    "bump": "np --no-cleanup --no-publish",
+    "postversion": "replace-regex --from=\"\\d+\\.\\d+\\.\\d+\" --to=\"$npm_package_version\" README.md"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "np": "^10.0.5"
+    "np": "^10.0.5",
+    "replace-regex": "^0.0.3"
   },
   "funding": "https://github.com/sponsors/mesqueeb",
   "repository": {
