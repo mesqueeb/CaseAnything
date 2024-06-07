@@ -1,6 +1,22 @@
 {
-	"version": "0.1.0",
-	"scripts": {
-		"bump": "npx bumpp"
-	}
+  "name": "CaseAnything",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "swift test",
+    "bump": "np --no-cleanup --no-publish"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "np": "^10.0.5"
+  },
+  "funding": "https://github.com/sponsors/mesqueeb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mesqueeb/CaseAnything.git"
+  },
+  "homepage": "https://github.com/mesqueeb/CaseAnything#readme",
+  "bugs": "https://github.com/mesqueeb/CaseAnything/issues"
 }
