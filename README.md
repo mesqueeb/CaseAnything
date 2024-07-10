@@ -4,7 +4,7 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fmesqueeb%2FCaseAnything%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/mesqueeb/CaseAnything)
 
 ```
-.package(url: "https://github.com/mesqueeb/CaseAnything", from: "0.1.3")
+.package(url: "https://github.com/mesqueeb/CaseAnything", from: "0.1.4")
 ```
 
 14 case changing functions: camelCase, kebab-case, PascalCase **and more**...<br />
