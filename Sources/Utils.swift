@@ -6,11 +6,11 @@ import Foundation
 // lower case ranges
 // [à-öø-ÿ]
 
-public func magicSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "^[a-zà-öø-ÿа-я]+|[A-ZÀ-ÖØ-ßА-Я][a-zà-öø-ÿа-я]+|[a-zà-öø-ÿа-я]+|[0-9]+|[A-ZÀ-ÖØ-ßА-Я]+(?![a-zà-öø-ÿа-я])") }
-public func spaceSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "\\S+") }
+func magicSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "^[a-zà-öø-ÿа-я]+|[A-ZÀ-ÖØ-ßА-Я][a-zà-öø-ÿа-я]+|[a-zà-öø-ÿа-я]+|[0-9]+|[A-ZÀ-ÖØ-ßА-Я]+(?![a-zà-öø-ÿа-я])") }
+func spaceSplit() -> NSRegularExpression { return try! NSRegularExpression(pattern: "\\S+") }
 
 /// A string.matchAll function that will return an array of _string parts_ and the indexes at which it split each part
-public func getPartsAndIndexes(
+func getPartsAndIndexes(
     _ string: String,
     splitRegex: NSRegularExpression
 ) -> (parts: [String], prefixes: [String]) {
@@ -42,7 +42,7 @@ public func getPartsAndIndexes(
 /// A function that splits a string on words and returns an array of words.
 /// - It can prefix each word with a given character
 /// - It can strip or keep special characters, this affects the logic for adding a prefix as well
-public func splitAndPrefix(_ string: String, keepSpecialCharacters: Bool = false, prefix: String = "", keep: [String] = []) -> [String] {
+func splitAndPrefix(_ string: String, keepSpecialCharacters: Bool = false, prefix: String = "", keep: [String] = []) -> [String] {
     let keep = Set(keep)
 
     let normalString = string.trimmingCharacters(in: .whitespacesAndNewlines).precomposedStringWithCanonicalMapping
@@ -95,7 +95,7 @@ public func splitAndPrefix(_ string: String, keepSpecialCharacters: Bool = false
 
 /// Capitalises a single word
 /// @returns the word with the first character in uppercase and the rest in lowercase
-public func capitaliseWord(_ string: String) -> String {
+func capitaliseWord(_ string: String) -> String {
     // Find the first alphabetic character in the string
     guard let regex = try? NSRegularExpression(pattern: "[A-ZÀ-ÖØ-ßa-zà-öø-ÿ]"),
           let match = regex.firstMatch(in: string, range: NSRange(string.startIndex..., in: string))
@@ -115,6 +115,6 @@ public func capitaliseWord(_ string: String) -> String {
 }
 
 /// Grabs the first character of a String and returns it as String
-public func firstCharacter(_ string: String) -> String {
+func firstCharacter(_ string: String) -> String {
     return String(string.first ?? Character(""))
 }
