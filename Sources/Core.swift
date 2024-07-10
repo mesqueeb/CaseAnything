@@ -48,7 +48,9 @@ public func pascalCase(_ string: String, keepSpecialCharacters: Bool = false, ke
 /// upperCamelCase("$catDog") == "CatDog"
 /// upperCamelCase("$catDog", keepSpecialCharacters: true) == "$CatDog"
 /// ```
-public let upperCamelCase = pascalCase
+public func upperCamelCase(_ string: String, keepSpecialCharacters: Bool = false, keep: [String] = []) -> String {
+	return pascalCase(string, keepSpecialCharacters: keepSpecialCharacters, keep: keep)
+}
 
 /// # 🥙 kebab-case
 /// converts a string to kebab-case
