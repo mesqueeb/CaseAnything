@@ -1,5 +1,6 @@
-// swiftformat:disable all
+// swift-format-ignore-file
 import Testing
+
 @testable import CaseAnything
 
 @Test func camelCase() async throws {
