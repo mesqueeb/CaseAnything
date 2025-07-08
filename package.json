@@ -1,6 +1,6 @@
 {
   "name": "CaseAnything",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "type": "module",
   "scripts": {
     "test": "swift test --enable-swift-testing",
