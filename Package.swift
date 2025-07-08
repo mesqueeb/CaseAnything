@@ -5,20 +5,9 @@ import PackageDescription
 
 let package = Package(
   name: "CaseAnything",
-  products: [
-    .library(
-        name: "CaseAnything",
-        targets: ["CaseAnything"]
-    ),
-  ],
+  products: [.library(name: "CaseAnything", targets: ["CaseAnything"])],
   targets: [
-    .target(
-        name: "CaseAnything",
-        swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
-    ),
-    .testTarget(
-        name: "CaseAnythingTests",
-        dependencies: ["CaseAnything"]
-    ),
+    .target(name: "CaseAnything", swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]),
+    .testTarget(name: "CaseAnythingTests", dependencies: ["CaseAnything"]),
   ]
 )
